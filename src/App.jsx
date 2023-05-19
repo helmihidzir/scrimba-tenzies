@@ -46,12 +46,17 @@ export default function App() {
     }
 
     function rollDice() {
-        setDice(prevDice =>
-            prevDice.map(die => {
-                return die.isHeld === false ?
-                    generateNewDie() :
-                    die
-            }))
+        if(tenzies) {
+            setTenzies(false)
+            setDice(allNewDice())
+        } else {
+            setDice(prevDice =>
+                prevDice.map(die => {
+                    return die.isHeld === false ?
+                        generateNewDie() :
+                        die
+                }))
+        }
     }
 
     function holdDice(id) {
