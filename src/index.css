@@ -21,11 +21,24 @@ main {
     align-items: center;
 }
 
+.title {
+    font-size: 40px;
+    margin: 0;
+}
+
+.instructions {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: center;
+}
+
 .dice-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 columns with equal width */
     grid-template-rows: repeat(2, 1fr); /* 2 rows with equal height */
     gap: 20px; /* Gap between grid items */
+    margin-bottom: 40px;
 }
 
 .die-face {
