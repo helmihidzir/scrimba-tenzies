@@ -1,5 +1,4 @@
 import React from "react"
-import { useState } from "react"
 import Die from "./components/Die.jsx"
 
 export default function App() {
@@ -14,6 +13,9 @@ export default function App() {
 
     return randomNumbers
   }
+  function rollDice() {
+    setDice(allNewDice())
+  }
 
   const diceElements = dice.map(die => <Die value={die} />)
 
@@ -22,6 +24,8 @@ export default function App() {
       <div className="dice-container">
         {diceElements}
       </div>
+
+      <button className="roll-dice" onClick={rollDice}>Roll</button>
     </main>
   )
 }
